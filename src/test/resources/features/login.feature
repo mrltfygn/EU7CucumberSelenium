@@ -1,12 +1,12 @@
 @login // all scenarios will run
 Feature: User Should be able to login
-   @driver
+   @driver @VYT-123
   Scenario: Login as a driver
     Given the user is on the login page
     When the user enters the driver information
     Then the user should be able to login
 
-   @sales_manager @smoke
+   @sales_manager @smoke @VYT-123
   Scenario: Login as a sales manager
     Given the user is on the login page
     When the user enters the sales manager information
