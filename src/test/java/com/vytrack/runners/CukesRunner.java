@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue ="com.vytrack.step_definitions",
         dryRun = false,
-        tags = "@smoke" //when we write any one of this tags , only written tags will run
+        //  tags = "@smoke" //when we write any one of this tags , only written tags will run
         // tags = "@VYT-123 and @smoke"         => Run all scenarios that has @VYT-123 and @smoke
         // tags = {"@VYT-123","@smoke"}         => Run all scenarios that has @VYT-123 and @smoke (old syntax)
 
@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         // tags = "@VYT-123 and not @smoke"     => Run all scenarios that has @VYT-123 but skip @smoke tags
         // tags = {"@VYT-123","~@smoke"}        =>Run all scenarios that has @VYT-123 but skip @smoke tags (old syntax)
 
-
+        tags = "@navigate"
 
 )
 public class CukesRunner {
