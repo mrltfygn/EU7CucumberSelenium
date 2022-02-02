@@ -8,7 +8,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue ="com.vytrack.step_definitions"
+        glue ="com.vytrack.step_definitions",
+        dryRun = false,
+        tags = "@smoke" //when we write any one of this tags , only written tags will run
+
 )
 public class CukesRunner {
 }
