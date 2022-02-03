@@ -1,6 +1,6 @@
 @login // all scenarios will run
 Feature: User Should be able to login
-   @driver @VYT-123
+   @driver @VYT-123 @wip
   Scenario: Login as a driver
     Given the user is on the login page
     When the user enters the driver information
