@@ -7,9 +7,11 @@ import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import com.vytrack.utilities.ConfigurationReader;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import java.util.List;
+import java.util.Map;
 
 public class ContactsStepDefs {
     @Given("the user logged in as {string}")
@@ -44,6 +46,18 @@ public class ContactsStepDefs {
         Assert.assertEquals(menuOptions,actualOptions);
         System.out.println(menuOptions.size());
         System.out.println(menuOptions);
+    }
+    @When("the user logs is using following credentials")
+    public void the_user_logs_is_using_following_credentials(Map<String,String> userInfo) {
+        System.out.println(userInfo);
+        new LoginPage().login(userInfo.get("username"),userInfo.get("password"));
+        String actualName=new DashboardPage().getUserName();
+        String expectedName=userInfo.get("firstname")+" "+userInfo.get("lastname");
+        System.out.println("expectedName = " + expectedName);
+        System.out.println("actualName = " + actualName);
+        Assert.assertEquals(expectedName,actualName);
+
+
     }
 
 
