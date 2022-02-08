@@ -45,7 +45,7 @@ Feature: Contacts Page
       | Marketing          |
       | Reports & Segments |
       | System             |
-  @wip
+
   Scenario: login as a given user
     Given the user is on the login page
     When the user logs is using following credentials
