@@ -59,8 +59,8 @@ public class LoginStepDefs {
         loginPage.login(username,password);
     }
 
-    @Then("the title cointains {string}")
-    public void theTitleCointains(String expectedTitle) {
+    @Then("the title contains {string}")
+    public void theTitleContains(String expectedTitle) {
         Assert.assertTrue(Driver.get().getTitle().contains(expectedTitle));
     }
 }
