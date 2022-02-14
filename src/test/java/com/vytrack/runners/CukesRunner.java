@@ -23,7 +23,7 @@ import org.junit.runner.RunWith;
         // tags = "@VYT-123 and not @smoke"     => Run all scenarios that has @VYT-123 but skip @smoke tags
         // tags = {"@VYT-123","~@smoke"}        =>Run all scenarios that has @VYT-123 but skip @smoke tags (old syntax)
 
-        tags = "@wip"
+        tags = "@smoke"
 
 )
 public class CukesRunner {

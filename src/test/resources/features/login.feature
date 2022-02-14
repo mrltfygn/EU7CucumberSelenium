@@ -1,4 +1,5 @@
 @login // all scenarios will run
+  @smoke
 Feature: User Should be able to login
   Background:
     Given the user is on the login page
